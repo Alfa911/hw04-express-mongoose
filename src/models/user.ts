@@ -17,13 +17,13 @@ let userSchema = new Schema<IUser>(
         name: {
             type: String,
             required: true,
-            match: /^[a-zA-Zа-яА-Я]*$/
+            match: /^[a-zA-Zа-яА-ЯіїІЇєЄ]*$/
         },
         email: {
             type: String,
             required: true,
             unique: true,
-            match: /^[a-zA-Z0-9-]+@([\w-]+\.)+[a-zA-Z]*$/
+            match: /^[\w\-\.]+[\w]+@([\w-]+\.)+[a-zA-Z]*$/
         },
         phone: {
             type: String,
